@@ -34,23 +34,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="band.html">Band</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="alben.html">Alben</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">News</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="kalender.html">Kalender</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="kontakt.html">Kontakt</a>
+                        <a class="nav-link" href="kontakt.html">Kontaktformular</a>
                     </li>
 
                 </ul>
@@ -61,6 +45,93 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!DOCTYPE html>
+    <html lang="de">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AC/DC - Kontaktformular</title>
+
+        <h1>AC/DC Kontaktformular</h1>
+        <p>Schicke eine Nachricht!</p>
+
+        <form id="kontaktFormular" onsubmit="return validiereFormular()">
+
+            <p>
+                <label for="email">Deine E-Mail-Adresse:</label><br>
+                <input type="email" id="email" name="email" placeholder="deine@email.de">
+            </p>
+
+            <p>
+                <label for="nachricht">Deine Nachricht an AC/DC:</label><br>
+                <textarea id="nachricht" name="nachricht" rows="5" cols="40"
+                    placeholder="Schreibe hier deine Nachricht..."></textarea>
+            </p>
+
+            <p>
+                <label for="bild">Bild hochladen (z.B. Konzertfoto):</label><br>
+                <input type="file" id="bild" name="bild" accept="image/*">
+            </p>
+
+            <p>
+                <input type="checkbox" id="datenschutz" name="datenschutz">
+                <label for="datenschutz">Ich akzeptiere die Datenschutzerklärung</label>
+            </p>
+
+            <p id="fehlerMeldung" style="color: red;"></p>
+            <p id="erfolgsMeldung" style="color: green;"></p>
+
+            <button type="submit">Senden</button>
+            <a href="index.html">
+                <button type="button">Abbrechen</button>
+            </a>
+
+        </form>
+
+        <script>
+            function validiereFormular() {
+
+                var emailFeld = document.getElementById("email").value;
+                var nachrichtFeld = document.getElementById("nachricht").value;
+                var bildFeld = document.getElementById("bild").files;
+                var datenschutzCheckbox = document.getElementById("datenschutz").checked;
+
+                var fehlerText = document.getElementById("fehlerMeldung");
+                var erfolgText = document.getElementById("erfolgsMeldung");
+                fehlerText.innerText = "";
+                erfolgText.innerText = "";
+                if (emailFeld === "") {
+                    fehlerText.innerText = "Bitte gib deine E-Mail-Adresse ein!";
+                    return false; // Formular nicht absenden
+                }
+
+                if (emailFeld.indexOf("@") === -1 || emailFeld.indexOf(".") === -1) {
+                    fehlerText.innerText = "Bitte gib eine gültige E-Mail-Adresse ein (mit @ und .)!";
+                    return false;
+                }
+
+                if (nachrichtFeld.trim() === "") {
+                    fehlerText.innerText = "Bitte gib eine Nachricht ein!";
+                    return false;
+                }
+
+                if (bildFeld.length === 0) {
+                    fehlerText.innerText = "Bitte wähle ein Bild zum Hochladen aus!";
+                    return false;
+                }
+
+                if (datenschutzCheckbox === false) {
+                    fehlerText.innerText = "Du musst die Datenschutzerklärung akzeptieren!";
+                    return false;
+                }
+
+                erfolgText.innerText = "Vielen Dank! Die Nachricht wurde (simuliert) erfolgreich gesendet. Rock on!";
+
+                return false;
+            }
+        </script>
 
 </body>
 
