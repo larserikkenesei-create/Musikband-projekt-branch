@@ -8,9 +8,34 @@
     <title>AC/DC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* CSS direkt für das Hero-Banner */
+        .hero-banner {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('img/Banner.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Anpassung der Höhe auf kleineren Bildschirmen */
+        @media (max-width: 768px) {
+            .hero-banner {
+                height: 220px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">AC/DC</a>
@@ -19,34 +44,113 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-
                 <ul class="navbar-nav ms-auto">
-
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">
-                            Startseite
-                        </a>
+                        <a class="nav-link active" href="index.html">Startseite</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="kontakt.html">
-                            Kontaktformular
-                        </a>
+                        <a class="nav-link" href="kontakt.html">Kontaktformular</a>
                     </li>
-
                 </ul>
-
             </div>
         </div>
     </nav>
-    <div class="banner">
-    </div>
-    <div class="bild">
-        <img src="img/Banner.png" alt="AC/DC Banner" class="img-fluid">
-    </div>
+
+    <header class="hero-banner shadow">
+        <div class="container">
+            <h1 class="display-3 fw-bold text-uppercase tracking-wide">AC/DC</h1>
+            <p class="lead fw-semibold">Power Up World Tour</p>
+        </div>
+    </header>
+
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="fw-bold mb-3">Über die Band</h2>
+                <p class="text-muted lead fs-6">
+                    AC/DC ist eine australische Rockband, die 1973 von den Brüdern Malcolm und Angus Young gegründet
+                    wurde.
+                    Mit weltweiten Millionenhits wie „Highway to Hell“ und „Back in Black“ zählen sie zu den
+                    erfolgreichsten
+                    und einflussreichsten Rockbands der Musikgeschichte. Bekannt für ihre extrem energiegeladenen
+                    Live-Shows
+                    und den unverkennbaren Gitarrensound rocken sie bis heute die Bühnen der Welt.
+                </p>
+            </div>
+        </div>
+    </section>
+    <main class="container my-5">
+        <h2 class="text-center mb-4 fw-bold">Tour-Kalender</h2>
+
+        <div class="table-responsive">
+            <table class="table table-bordered text-center align-middle shadow-sm">
+                <thead class="table-dark">
+                    <tr>
+                        <th colspan="7" class="py-3 fs-5">Oktober 2026</th>
+                    </tr>
+                    <tr>
+                        <th>Mo</th>
+                        <th>Di</th>
+                        <th>Mi</th>
+                        <th>Do</th>
+                        <th>Fr</th>
+                        <th>Sa</th>
+                        <th>So</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-muted bg-light">28</td>
+                        <td class="text-muted bg-light">29</td>
+                        <td class="text-muted bg-light">30</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td class="table-warning fw-bold">10<br><small class="text-muted">Show</small></td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td class="table-warning fw-bold">24<br><small class="text-muted">Show</small></td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td class="text-muted bg-light">1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 
 </html>

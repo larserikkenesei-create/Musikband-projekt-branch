@@ -1,0 +1,103 @@
+/* style.css */
+
+/* Grundlegendes Layout & Flexbox-Zentrierung auf dem Body */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Styling des Formulars als zentrale Box */
+#kontaktFormular {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Überschriften */
+h1 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #212529;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Abstände für die Absätze im Formular */
+#kontaktFormular p {
+    margin-bottom: 1.2rem;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #495057;
+    margin-bottom: 0.3rem;
+    display: inline-block;
+}
+
+/* Eingabefelder (E-Mail, Textarea, Datei) */
+input[type="email"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="email"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+/* Buttons */
+button[type="submit"],
+button[type="button"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+}
+
+button[type="submit"] {
+    background-color: #212529;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #343a40;
+}
+
+button[type="button"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+button[type="button"]:hover {
+    background-color: #5c636a;
+}
