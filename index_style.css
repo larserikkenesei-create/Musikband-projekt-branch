@@ -127,3 +127,15 @@ body {
 footer {
     border-top: 3px solid var(--primary-red);
 }
+
+.bild-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.acdc-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
